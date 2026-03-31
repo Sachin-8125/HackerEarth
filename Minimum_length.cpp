@@ -1,30 +1,25 @@
 #include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
-
-long long getsubstring(long long n) {
-    long long a = n / 2 + 1;
-    long long b = n - n / 2 + 1;
-    return a * b - 1;
-}
-
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-
-    int t;
-    cin >> t;
-    while (t--) {
-        long long n, low = 0, high = 99999, ans = 1'000'000;
-        cin >> n;
-        while (low <= high) {
-            long long mid = (low + high) / 2;
-            if (getsubstring(mid) >= n) {
-                ans = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
+    int num;
+    cin >> num;  
+    int n,x,r,l;
+    for(int i=0;i<num;i++){
+        vector<int>arr1,arr2;
+        cin>>n;
+        for(int j=0;j<n;j++){
+            cin>>x;
+            arr1.push_back(x);
         }
-        cout << ans << '\n';
+        for(int j=0;j<n;j++){
+            cin>>x;
+            arr2.push_back(x);
+        }
+        l=0,r=n-1;
+        while(arr1[l]==arr2[l])l++;
+        while(arr1[r]==arr2[r])r--;
+        if(r>l)cout<<r-l+1<<endl;
+        else cout<<0<<endl;
     }
 }
