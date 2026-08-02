@@ -34,10 +34,10 @@ maxK = max(maxK, K[i]);
     }
     invFact[maxK] = mod_pow(fact[maxK], MOD - 2);
     for (long long i = maxK; i > 0; --i) {
-invFact[i-1] = (invFact[i] * i) % MOD;
+        invFact[i-1] = (invFact[i] * i) % MOD;
     }
 
-for (int i = 0; i < T; ++i) {
+    for (int i = 0; i < T; ++i) {
         long long n = N[i], k = K[i];
         long long ans = fact[k];
         ans = (ans * invFact[k - n]) % MOD;
