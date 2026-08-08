@@ -1,40 +1,30 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-vector<int> solve (int N, int K, vector<int> A) {
-   // Write your code here
-   
-   
-}
-
 int main() {
-
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    
     int T;
-    cin >> T;
-    for(int t_i = 0; t_i < T; t_i++)
-    {
-        vector<string> custom_input_1(2);
-        for(int i_custom_input_1 = 0; i_custom_input_1 < 2; i_custom_input_1++)
-        {
-        	cin >> custom_input_1[i_custom_input_1];
+    if (!(cin >> T)) return 0;
+    while (T--) {
+        int n, x;
+        cin >> n >> x;
+        vector<int> a(n);
+        for (int i = 0; i < n; ++i) cin >> a[i];
+        
+        sort(a.begin(), a.end(), [&](int u, int v) {
+            int du = __builtin_popcount(u ^ x);
+            int dv = __builtin_popcount(v ^ x);
+            if (du != dv) return du < dv;
+            return u < v;
+        });
+        
+        for (int i = 0; i < n; ++i) {
+            if (i) cout << ' ';
+            cout << a[i];
         }
-        int N = stoi(custom_input_1[0]);
-        int K = stoi(custom_input_1[1]);
-        vector<int> A(N);
-        for(int i_A = 0; i_A < N; i_A++)
-        {
-        	cin >> A[i_A];
-        }
-
-        vector<int> out_;
-        out_ = solve(N, K, A);
-        cout << out_[0];
-        for(int i_out_ = 1; i_out_ < out_.size(); i_out_++)
-        {
-        	cout << " " << out_[i_out_];
-        }
-        cout << "\n";
+        cout << '\n';
     }
+    return 0;
 }
