@@ -10,12 +10,19 @@ All solutions are stored at the root level, each in its own `.cpp` file named af
 
 ```
 HackerEarth/
+├── 2_arrays.cpp
 ├── AND_Subsequence.cpp
 ├── Caesar_s_Cipher.cpp
 ├── Count_Divisors.cpp
+├── Curious_Queries.cpp
 ├── Longest_Paths_in_Tree.cpp
 ├── Modulo_Fermat_s_Theorem.cpp
-└── ... (100+ problems)
+├── Shubham_and_Subarrays.cpp
+├── Shubham_and_Subarray_Xor.cpp
+├── Shubham_and_Tree_1.cpp
+├── Shubham_and_Tree_2.cpp
+├── Shubham_and_Xor.cpp
+└── ... (167 problems)
 ```
 
 ---
@@ -30,9 +37,13 @@ HackerEarth/
 | **Sorting** | `CountingSort`, `Hamming_Sort` |
 | **Number Theory** | `Count_Divisors`, `Base_numbers`, `Calculate_the_Power` |
 | **Greedy** | `Candy_Distribution`, `Minimize_Cost`, `Lunch_boxes` |
-| **Trees** | `Longest_Paths_in_Tree`, `Kth_path` |
+| **Trees** | `Longest_Paths_in_Tree`, `Kth_path`, `Shubham_and_Tree_1`, `Shubham_and_Tree_2` |
 | **Game Theory** | `An_Unfair_Game`, `Mojo_Jojo_and_Game`, `Fun_Game_Capillary` |
-| **Bit Manipulation** | `AND_Subsequence`, `Count_MEX`, `Find_Mex` |
+| **Bit Manipulation** | `AND_Subsequence`, `Count_MEX`, `Find_Mex`, `Shubham_and_Xor` |
+| **Trie / XOR** | `Shubham_and_Subarray_Xor` |
+| **Offline Queries / Fenwick Tree** | `Curious_Queries` |
+| **Small-to-Large Merging** | `Shubham_and_Tree_1`, `Shubham_and_Tree_2` |
+| **Hashing / Coordinate Compression** | `Shubham_and_Subarrays` |
 | **Miscellaneous** | `Harry_Potter_and_the_Prisoner_of_Azkaban`, `F_R_I_E_N_D_S`, `Faceless_Arya` |
 
 ---
@@ -73,7 +84,7 @@ g++ -std=c++17 -O2 -o sol Count_Divisors.cpp
 
 | Metric | Count |
 |---|---|
-| Total Solutions | 100+ |
+| Total Solutions | 167 |
 | Language | C++ |
 | Platform | HackerEarth |
 
